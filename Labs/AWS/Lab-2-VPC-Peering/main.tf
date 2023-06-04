@@ -97,14 +97,3 @@ module "vpc-peering" {
   route-table-id = [module.fla-vpc.route-table-id[0], module.nyc-vpc.route-table-id[0]]
   destination-cidr = ["10.0.0.0/16", "10.1.0.0/16"]
 }
-
-// VPC Peering Routing Connectivity
-# module "vpc-peering-connectivity" {
-#   depends_on = [
-#     module.vpc-peering
-#   ]
-#   source = "github.com/ajenehall/Terraform//AWS/modules/peerings-connectivity"
-#   route-table-id = [module.fla-vpc.route-table-id[0], module.nyc-vpc.route-table-id[0]]
-#   destination-cidr = ["10.0.0.0/16", "10.1.0.0/16"]  
-#   peering-connection-id = module.vpc-peering.peering-connection-id
-# }
