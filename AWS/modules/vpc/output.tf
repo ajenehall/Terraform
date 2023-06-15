@@ -10,7 +10,7 @@ output "subnet-id" {
 
 output "subnet-cidr" {
   description = "Subnet CIDR block"
-  value = aws_subnet.main.cidr_block[*]
+  value = aws_subnet.main[*].cidr_block
 }
 
 output "route-table-id" {
