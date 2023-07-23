@@ -8,10 +8,10 @@ output "subnet-id" {
   value = aws_subnet.main[*].id
 }
 
-# output "subnet-cidr" {
-#   description = "Subnet CIDR block"
-#   value = aws_subnet.main[*].cidr_block
-# }
+output "subnet-cidr" {
+  description = "Subnet CIDR block"
+  value = aws_subnet.main[*].cidr_block
+}
 
 output "route-table-id" {
   description = "ID of a route table"
